@@ -1,0 +1,13 @@
+
+
+@font-face {
+  font-family: Mona ;
+  src: url('./fonts/MonaSans_SemiExpanded-Regular.ttf');
+}
+
+@import "tailwindcss";
+
+
+@theme{
+  --font-Mona: Mona, "sans-serif"
+}
