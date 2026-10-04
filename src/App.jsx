@@ -1,30 +1,22 @@
 import React from 'react'
-import Home from './Pages/Home'
-import Navbar from './components/Navbar'
-import Project from './Pages/Project'
-import Email from './Pages/Email'
 
 
 const App = () => {
-  
+
   return (
     <>
-    <div className='w-full h-screen overflow-hidden  '>
-      <video
-        className='fixed top-0 w-full h-full object-cover -z-10 '
-        src='/bg.mp4'
-        autoPlay
-        loop
-        playsInline
-        muted
-      />
-      <Navbar />
+      <div className='relative w-full h-screen flex justify-center items-center overflow-hidden bg-background'>
+        {/* Top-left div with round black border on the right */}
+        <div className='absolute top-0 left-0 z-20 w-56 h-56 border-5 border-black rounded-full'></div>
 
-      <Home />
-      <Project/>
-      <Email/>
-
-    </div>
+        <div className='absolute z-0 flex whitespace-nowrap select-none animate-marquee'>
+          <h1 className='font-sans font-bold text-[250px] pr-16'>ZAFAR HUSSAIN</h1>
+          <h1 className='font-sans font-bold text-[250px] pr-16'>ZAFAR HUSSAIN</h1>
+          <h1 className='font-sans font-bold text-[250px] pr-16'>ZAFAR HUSSAIN</h1>
+          <h1 className='font-sans font-bold text-[250px] pr-16'>ZAFAR HUSSAIN</h1>
+        </div>
+        <img src="/V2/Hero_BG.png" alt="" className='relative z-10 w-auto h-auto object-cover' />
+      </div>
 
     </>
   )

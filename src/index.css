@@ -1,13 +1,30 @@
-
-
 @font-face {
-  font-family: Mona ;
+  font-family: Mona;
   src: url('./fonts/MonaSans_SemiExpanded-Regular.ttf');
 }
 
 @import "tailwindcss";
 
 
-@theme{
-  --font-Mona: Mona, "sans-serif"
+@theme {
+  --font-Mona: Mona, "sans-serif";
+  --font-lato: "Lato", sans-serif;
+  --color-background: #d9dde0;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee 10s linear infinite;
 }
