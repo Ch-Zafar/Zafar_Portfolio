@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
@@ -7,8 +6,7 @@ import { useSelector } from 'react-redux'
 
 const Project = () => {
 
-    const projetVis=useSelector((state)=> state.visibilty.project)
-
+    const projetVis = useSelector((state) => state.visibilty.project)
 
     const [activeTab, setActiveTab] = useState('website')
     const [currentIndex, setCurrentIndex] = useState(0)
@@ -58,7 +56,7 @@ const Project = () => {
     )
 
     return (
-        <div className={`w-full mt-10 h-11/12 lg:h-screen bg-transparent  p-4 sm:p-6 md:p-12 lg:p-20 xl:p-28 py-20 fixed top-0  ${projetVis ? "translate-x-0": "-translate-x-650" } transition-all duration-700`}>
+        <div className={`w-full mt-10 h-11/12 lg:h-screen bg-transparent p-4 sm:p-6 md:p-12 lg:p-20 xl:p-28 py-20 fixed top-0 overflow-y-auto ${projetVis ? "translate-x-0" : "-translate-x-full"} transition-all duration-700`}>
             <div className='w-full min-h-[80vh] border border-white/90 rounded-2xl flex flex-col items-center p-4 sm:p-6 md:p-8 bg-transparent backdrop-blur-lg'>
                 {/* Tab Buttons */}
                 <div className='w-full max-w-xs sm:max-w-sm h-10 sm:h-12 border border-white/90 flex rounded-2xl mb-6 sm:mb-8'>
@@ -82,7 +80,7 @@ const Project = () => {
 
                 {/* Carousel Container */}
                 <div className='relative w-full flex-1 flex items-center'>
-                    {/* Left Arrow - Hidden on mobile when only 1 card per page */}
+                    {/* Left Arrow */}
                     {totalPages > 1 && (
                         <button
                             onClick={prevSlide}
@@ -109,7 +107,7 @@ const Project = () => {
                                             alt={e.name}
                                         />
                                     </div>
-                                    <div className='w-full h-2/5 p-3 sm:p-4 flex flex-col justify-center'>
+                                    <div className='w-full h-2/5 p-3 sm:p-4 flex flex-col justify-center text-left'>
                                         <h1 className='text-white font-bold text-lg sm:text-xl md:text-2xl mb-1 sm:mb-2 truncate'>
                                             {e.name}
                                         </h1>
@@ -122,7 +120,7 @@ const Project = () => {
                         </div>
                     </div>
 
-                    {/* Right Arrow - Hidden on mobile when only 1 card per page */}
+                    {/* Right Arrow */}
                     {totalPages > 1 && (
                         <button
                             onClick={nextSlide}

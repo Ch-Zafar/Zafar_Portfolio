@@ -5,6 +5,9 @@
 
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
 
 @theme {
   --font-Mona: Mona, "sans-serif";
@@ -26,5 +29,5 @@
   display: flex;
   width: max-content;
   will-change: transform;
-  animation: marquee 10s linear infinite;
+  animation: marquee 16s linear infinite;
 }

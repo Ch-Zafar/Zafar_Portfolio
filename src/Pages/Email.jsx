@@ -38,10 +38,9 @@ const Email = () => {
   };
 
   return (
-
     <>
       <div
-        className={`w-full h-10/12 lg:h-screen mt-10 bg-transparent overflow-y-hidden p-4 sm:p-8 md:p-16 lg:p-28 flex flex-col items-center fixed top-0 ${emailVis ? "translate-x-0" : "translate-x-full"
+        className={`w-full h-10/12 lg:h-screen mt-10 bg-transparent overflow-y-auto p-4 sm:p-8 md:p-16 lg:p-28 flex flex-col items-center fixed top-0 ${emailVis ? "translate-x-0" : "translate-x-full"
           } transition-all duration-700`}
       >
         <h1 className="font-bold font-Mona text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-white text-center">
@@ -80,7 +79,7 @@ const Email = () => {
           </form>
         </div>
       </div>
-      </>
+    </>
   );
 };
 
